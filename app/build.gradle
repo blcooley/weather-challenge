@@ -54,10 +54,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.6.2"
 
     compileOnly "com.google.auto.value:auto-value-annotations:1.6.3"
-    annotationProcessor "com.google.auto.value:auto-value:1.6.3"
     compileOnly  "com.ryanharter.auto.value:auto-value-gson-annotations:0.8.0"
-    annotationProcessor "com.ryanharter.auto.value:auto-value-gson:0.8.0"
-    annotationProcessor "com.ryanharter.auto.value:auto-value-parcel:0.2.6"
 
     testImplementation "junit:junit:4.13.2"
     testImplementation "org.mockito:mockito-android:3.4.6"
