@@ -1,5 +1,7 @@
 package com.example.androidchallenge.network.models
 
+import com.google.gson.annotations.SerializedName
+
 data class WeatherData(
     val lat: Double,
     val lon: Double,
@@ -16,13 +18,18 @@ data class CurrentWeather(
     val sunrise: Long,
     val sunset: Long,
     val temp: Double,
+    @SerializedName("feels_like")
     val feelsLike: Double,
     val pressure: Int,
     val humidity: Int,
-    val weather: List<Weather>
+    val weather: List<Weather>,
+    @SerializedName("wind_speed")
+    val windSpeed: Double,
+    @SerializedName("wind_deg")
+    val windDirection: Int,
 ) {
     companion object {
-        val EMPTY = CurrentWeather(0, 0, 0, 0.0, 0.0, 0, 0, listOf())
+        val EMPTY = CurrentWeather(0, 0, 0, 0.0, 0.0, 0, 0, listOf(), 0.0, 0)
     }
 }
 

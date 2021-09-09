@@ -1,9 +1,19 @@
-TODO: 
-- Better error message handling than Toast
-- Images
-- Graph for forecast
-- Add repository and/or storage for offline use
+# Brian Cooley's Implementation of the One Drop Android Coding Challenge
 
+# Explanation of Architecture
+
+# Screenshots
+    
+# Future Work 
+* Better error message handling than Toast
+* Images for weather (Clear/Partly Cloudy/etc.)
+* Graph for forecast
+* Add repository and database/file storage for offline use
+* Provide common cities as options using a HashMap that has keys that are city names and values of Lat/Long
+* Use location to fetch weather
+* Check for network status
+* Unit tests
+* UI tests
 
 # One Drop Android Coding Challenge
 

@@ -32,12 +32,14 @@ class CurrentWeatherFragment : Fragment() {
 
         weatherViewModel.uiState.observe(viewLifecycleOwner) { uiState ->
             when (uiState.loadingStatus) {
-                LoadingStatus.LOADING -> {}
+                LoadingStatus.LOADING -> { binding.progressBar.visibility = View.VISIBLE }
                 LoadingStatus.SUCCESS -> {
+                    binding.progressBar.visibility = View.GONE
                     bindWeatherData(uiState.weatherData)
                 }
-                LoadingStatus.INIT -> {}
+                LoadingStatus.INIT -> { binding.progressBar.visibility = View.GONE }
                 LoadingStatus.ERROR -> {
+                    binding.progressBar.visibility = View.GONE
                     Toast.makeText(requireContext(), uiState.errorString, Toast.LENGTH_LONG).show()
                 }
             }
@@ -49,6 +51,10 @@ class CurrentWeatherFragment : Fragment() {
     private fun bindWeatherData(data: WeatherData) {
         binding.feelsLikeText.text = getString(R.string.feels_like_format, data.current.feelsLike)
         binding.atmosphericPressureText.text = getString(R.string.pressure_format, data.current.pressure)
+        binding.humidityText.text = getString(R.string.humidity_format, data.current.humidity)
+        binding.locationText.text = getString(R.string.location_format, data.lat, data.lon)
+        binding.temperatureText.text = getString(R.string.temperature_format, data.current.temp)
+        binding.windSpeedAndDirectionText.text = getString(R.string.wind_format, data.current.windSpeed, data.current.windDirection)
     }
 
     override fun onDestroyView() {

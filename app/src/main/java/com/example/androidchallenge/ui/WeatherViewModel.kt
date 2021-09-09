@@ -23,7 +23,7 @@ class WeatherViewModel : ViewModel() {
         val previousUiState = uiState.value
         mutableUiState.value = UiState(previousUiState?.weatherData ?: WeatherData.EMPTY, LoadingStatus.LOADING, previousUiState?.errorString ?: "")
         viewModelScope.launch {
-            val response = WeatherApi.weatherService.getWeatherForecast(lat, long)
+            val response = WeatherApi.weatherService.getWeatherForecast(latitude, longitude)
             if (response.isSuccessful) {
                 mutableUiState.value = UiState(response.body() ?: WeatherData.EMPTY, LoadingStatus.SUCCESS, "")
             } else {
