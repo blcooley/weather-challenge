@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         if (savedInstanceState == null) {
-            val fragment = ForecastFragment()
+            val fragment = CurrentWeatherFragment()
             fragment.arguments = intent.extras
             supportFragmentManager
                 .beginTransaction()
