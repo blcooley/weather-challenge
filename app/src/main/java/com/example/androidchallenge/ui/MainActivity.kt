@@ -10,14 +10,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-
-        if (savedInstanceState == null) {
-            val fragment = CurrentWeatherFragment()
-            fragment.arguments = intent.extras
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.main_content, fragment)
-                .commit()
-        }
     }
 }

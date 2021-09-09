@@ -21,8 +21,17 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
-        android:id="@+id/main_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:navGraph="@navigation/navigation"
+            app:defaultNavHost="true"
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
