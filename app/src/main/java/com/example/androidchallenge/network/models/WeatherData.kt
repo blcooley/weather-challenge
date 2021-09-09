@@ -5,7 +5,11 @@ data class WeatherData(
     val lon: Double,
     val timezone: String,
     val current: CurrentWeather
-)
+) {
+    companion object {
+        val EMPTY = WeatherData(0.0, 0.0, "", CurrentWeather.EMPTY)
+    }
+}
 
 data class CurrentWeather(
     val dt: Long,
@@ -16,7 +20,11 @@ data class CurrentWeather(
     val pressure: Int,
     val humidity: Int,
     val weather: List<Weather>
-)
+) {
+    companion object {
+        val EMPTY = CurrentWeather(0, 0, 0, 0.0, 0.0, 0, 0, listOf())
+    }
+}
 
 data class Weather(
     val id: Int,

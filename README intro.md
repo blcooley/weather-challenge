@@ -1,10 +1,3 @@
-TODO: 
-- Better error message handling than Toast
-- Images
-- Graph for forecast
-- Add repository and/or storage for offline use
-
-
 # One Drop Android Coding Challenge
 
 At One Drop we take great pride in the quality of our product and our engineering team’s software craft. As such, we request that engineer candidates submit a code challenge to help us assess their expertise with the Android platform and software development as a whole.
