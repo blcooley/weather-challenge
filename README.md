@@ -10,11 +10,7 @@ The ViewModel uses the Retrofit 2 WeatherApi. It is a direct call to the service
 The app uses the Jetpack Navigation framework for transitions between fragments
 
 # Screenshots
-Current weather:
-![image](CurrentWeatherScreenShot.png)
-
-Forecast:
-![image](ForecastScreenShot.png)
+![image](CurrentWeatherScreenShot.png) ![image](ForecastScreenShot.png)
 
 # Future Work 
 * Better error message handling than Toast
