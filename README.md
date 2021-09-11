@@ -3,6 +3,7 @@
 # Explanation of Architecture
 The app is a single activity app with two fragments. One fragment (the home fragment) displays the current weather, while a second fragment displays the 7-day forecast.
 
+The architecture is MVVM. The model objects are represented by several classes in WeatherData.kt. The Fragments (CurrentWeatherFragment and ForecastFragment) are the Views, and the WeatherViewModel (from Android Architecture components) is the ViewModel. 
 There is a single ViewModel that acts as a lifecycle-aware store for the Activity. This allows the Fragments to share the data retrieved by the API call. Since the call returns both current data and the forecast, this minimizes the number of calls.
 
 The ViewModel uses the Retrofit 2 WeatherApi. It is a direct call to the service. In a more complex app, we might add another layer so that the network calls could be store in local storage, such as a Room database. This layer is typically referred to as a Repository  (for example, in Google's Android documentation).
