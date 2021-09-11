@@ -8,9 +8,17 @@
     <string name="previous">Previous</string>
 
     <string name="feels_like_format">Feels like: %.0f</string>
-    <string name="pressure_format">Pressure: %d</string>
-    <string name="humidity_format">Humidity: %d %%</string>
-    <string name="location_format">Location: %f, %f</string>
-    <string name="temperature_format">Temperature: %.0f °F</string>
-    <string name="wind_format">Wind: %.1f mph, %d</string>
+    <string name="pressure_format">%d</string>
+    <string name="humidity_format">%d%%</string>
+    <string name="location_format">(%f, %f)</string>
+    <string name="temperature_format">%.0f°</string>
+    <string name="temperature_high_low_digits_format">%.0f°|%.0f°</string>
+    <string name="wind_format">%.1f mph, %d</string>
+    <string name="image_showing_the_daily_weather">Image showing the daily weather</string>
+    <string name="seven_day_forecast">7-day Forecast</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="pressure">Pressure</string>
+    <string name="new_york_ny">New York, NY</string>
+    <string name="icon_url">https://openweathermap.org/img/wn/%s@2x.png</string>
 </resources>

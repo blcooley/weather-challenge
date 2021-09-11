@@ -6,10 +6,11 @@ data class WeatherData(
     val lat: Double,
     val lon: Double,
     val timezone: String,
-    val current: CurrentWeather
+    val current: CurrentWeather,
+    val daily: List<DailyWeather>
 ) {
     companion object {
-        val EMPTY = WeatherData(0.0, 0.0, "", CurrentWeather.EMPTY)
+        val EMPTY = WeatherData(0.0, 0.0, "", CurrentWeather.EMPTY, listOf())
     }
 }
 
@@ -40,7 +41,23 @@ data class Weather(
     val icon: String
 )
 
+data class DailyWeather(
+    @SerializedName("dt")
+    val date: Long,
+    val temp: DailyTemps,
+    @SerializedName("pop")
+    val chanceOfRain: Double,
+    @SerializedName("rain")
+    val rainfall: Double?,
+    val weather: List<Weather>
+)
 
+data class DailyTemps(
+    @SerializedName("max")
+    val high: Double,
+    @SerializedName("min")
+    val low: Double
+)
 /*
 {
     "lat": 40.12,

@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/currentWeatherFragment"
         android:name="com.example.androidchallenge.ui.CurrentWeatherFragment"
-        android:label="CurrentWeatherFragment" >
+        android:label="Current Weather">
         <action
             android:id="@+id/action_currentWeatherFragment_to_forecastFragment"
             app:destination="@id/forecastFragment" />
@@ -15,5 +15,5 @@
     <fragment
         android:id="@+id/forecastFragment"
         android:name="com.example.androidchallenge.ui.ForecastFragment"
-        android:label="ForecastFragment" />
+        android:label="7-Day Forecast" />
 </navigation>
